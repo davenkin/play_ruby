@@ -30,6 +30,7 @@ end
 class Category < ActiveRecord::Base
    has_and_belongs_to_many :questionnaires
 end
+
 User.create(:name => 'Davenkin', :password => 'Davenkin', :email => "davenkin@163.com", :register_date =>'2011-02-02') 
 user = User.find(:first) # returns the first object fetched by SELECT * FROM rubyists  
 user.questionnaires.create(:name => 'Do you like programming?', :post_date => Time.now)
@@ -49,4 +50,5 @@ user.comments.create(:content => "Yes, I like it.", :post_date => Time.now, :que
 questionnaire.comments.create(:content => "No, I do not like it.", :post_date => Time.now, :user_id => user.id )
 Comment.create(:content => "Um, it hard to say.", :post_date => Time.now, :user_id => user.id,  :questionnaire_id => questionnaire.id )
 puts %{#{user.name} email: #{user.email}} 
+#questionnaire.destroy
 #user.destroy
