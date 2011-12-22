@@ -1,1 +1,3 @@
-activerecord has nothing to do with foreign key, it is the databases' job to determine whether foreign key is used.
+(1)activerecord has nothing to do with foreign key, it is the databases' job to determine whether or not  foreign key is used.
+
+(2)many to many: the relation table names should be in alphanumeric order, if a table named a and a table named b have many-to-many relation, then the relation table should be named as_bs, but not bs_as.
