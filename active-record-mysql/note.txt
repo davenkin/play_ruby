@@ -1,0 +1,16 @@
+how to get activerecord and mysql gem running together on this mac:
+(1)install activerecord
+(2)install mysql, mysql start item and mysql panel,
+(3)set the right PATH for mysql, /usr/local/mysql/bin in to ~/.bash_profile
+(4)set the right DYLD_LIBRARY_PATH to locate to the right path of mysql, /usr/local/mysql/lib in to ~/.bash_profile
+(5)install mysql gem
+(6)run.sh
+
+determine a socket:
+development:
+  adapter: mysql
+  database: dbname
+  username: dbuser
+  password: dbpw
+  socket: /Applications/XAMPP/xamppfiles/var/mysql/mysql.sock
+

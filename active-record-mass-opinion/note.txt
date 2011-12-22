@@ -1,0 +1,1 @@
+activerecord has nothing to do with foreign key, it is the databases' job to determine whether foreign key is used.
