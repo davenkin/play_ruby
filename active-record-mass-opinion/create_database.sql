@@ -44,4 +44,19 @@ create table comments (
   foreign key (questionnaire_id) references questionnaires (id)
 );
 
+create table categories (
+  id int not null auto_increment,
+  name varchar(50) not null,
+  primary key (id) 
+);
+
+create table categories_questionnaires (
+  id int not null auto_increment,
+  questionnaire_id int not null,
+  category_id int not null,
+  primary key (id),
+  foreign key (questionnaire_id) references questionnaires (id),
+  foreign key (category_id) references categories (id)
+);
+
 
