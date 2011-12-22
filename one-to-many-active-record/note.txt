@@ -1,0 +1,3 @@
+In one-to-many relationships, has_many and belongs_to do not have to be in pairs, either one is enough, these
+two methods only defines the relevant method names. For example has_many :books will define a method named books
+for Category class.
